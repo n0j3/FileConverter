@@ -1,0 +1,3 @@
+/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles/FileConverter.dir
+/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles/edit_cache.dir
+/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles/rebuild_cache.dir
