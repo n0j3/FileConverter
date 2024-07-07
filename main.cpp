@@ -1,18 +1,21 @@
 #include <iostream>
 #include <string>
+#include "converter.h"
 
 int main() {
-    std::string stlInput; // Declare stlInput as a string variable
-    std::string stepOutput; // Declare stepOutput as a string variable
+    std::string inputPath;
+    std::string outputPath;
 
-    // Get parameters
     std::cout << "Provide input path: ";
-    std::cin >> stlInput;
+    std::cin >> inputPath;
 
     std::cout << "Provide output path: ";
-    std::cin >> stepOutput;
+    std::cin >> outputPath;
 
-    // You can use the input paths as needed here
+    Converter converter;
+    if (!converter.convert(inputPath, outputPath)) {
+        return 1;
+    }
 
     return 0;
 }

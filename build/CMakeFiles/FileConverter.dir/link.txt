@@ -1,1 +1,1 @@
-/usr/bin/c++ -g CMakeFiles/FileConverter.dir/main.cpp.o -o FileConverter 
+/usr/bin/c++ -g CMakeFiles/FileConverter.dir/main.cpp.o CMakeFiles/FileConverter.dir/converter.cpp.o CMakeFiles/FileConverter.dir/stepConverter.cpp.o CMakeFiles/FileConverter.dir/stepReader.cpp.o CMakeFiles/FileConverter.dir/stepWriter.cpp.o CMakeFiles/FileConverter.dir/stlConverter.cpp.o CMakeFiles/FileConverter.dir/stlReader.cpp.o CMakeFiles/FileConverter.dir/stlWriter.cpp.o -o FileConverter 

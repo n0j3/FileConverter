@@ -129,6 +129,30 @@ FileConverter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/build
 .PHONY : FileConverter/fast
 
+converter.o: converter.cpp.o
+.PHONY : converter.o
+
+# target to build an object file
+converter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/converter.cpp.o
+.PHONY : converter.cpp.o
+
+converter.i: converter.cpp.i
+.PHONY : converter.i
+
+# target to preprocess a source file
+converter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/converter.cpp.i
+.PHONY : converter.cpp.i
+
+converter.s: converter.cpp.s
+.PHONY : converter.s
+
+# target to generate assembly for a file
+converter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/converter.cpp.s
+.PHONY : converter.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -153,6 +177,150 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+stepConverter.o: stepConverter.cpp.o
+.PHONY : stepConverter.o
+
+# target to build an object file
+stepConverter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepConverter.cpp.o
+.PHONY : stepConverter.cpp.o
+
+stepConverter.i: stepConverter.cpp.i
+.PHONY : stepConverter.i
+
+# target to preprocess a source file
+stepConverter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepConverter.cpp.i
+.PHONY : stepConverter.cpp.i
+
+stepConverter.s: stepConverter.cpp.s
+.PHONY : stepConverter.s
+
+# target to generate assembly for a file
+stepConverter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepConverter.cpp.s
+.PHONY : stepConverter.cpp.s
+
+stepReader.o: stepReader.cpp.o
+.PHONY : stepReader.o
+
+# target to build an object file
+stepReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepReader.cpp.o
+.PHONY : stepReader.cpp.o
+
+stepReader.i: stepReader.cpp.i
+.PHONY : stepReader.i
+
+# target to preprocess a source file
+stepReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepReader.cpp.i
+.PHONY : stepReader.cpp.i
+
+stepReader.s: stepReader.cpp.s
+.PHONY : stepReader.s
+
+# target to generate assembly for a file
+stepReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepReader.cpp.s
+.PHONY : stepReader.cpp.s
+
+stepWriter.o: stepWriter.cpp.o
+.PHONY : stepWriter.o
+
+# target to build an object file
+stepWriter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepWriter.cpp.o
+.PHONY : stepWriter.cpp.o
+
+stepWriter.i: stepWriter.cpp.i
+.PHONY : stepWriter.i
+
+# target to preprocess a source file
+stepWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepWriter.cpp.i
+.PHONY : stepWriter.cpp.i
+
+stepWriter.s: stepWriter.cpp.s
+.PHONY : stepWriter.s
+
+# target to generate assembly for a file
+stepWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepWriter.cpp.s
+.PHONY : stepWriter.cpp.s
+
+stlConverter.o: stlConverter.cpp.o
+.PHONY : stlConverter.o
+
+# target to build an object file
+stlConverter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlConverter.cpp.o
+.PHONY : stlConverter.cpp.o
+
+stlConverter.i: stlConverter.cpp.i
+.PHONY : stlConverter.i
+
+# target to preprocess a source file
+stlConverter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlConverter.cpp.i
+.PHONY : stlConverter.cpp.i
+
+stlConverter.s: stlConverter.cpp.s
+.PHONY : stlConverter.s
+
+# target to generate assembly for a file
+stlConverter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlConverter.cpp.s
+.PHONY : stlConverter.cpp.s
+
+stlReader.o: stlReader.cpp.o
+.PHONY : stlReader.o
+
+# target to build an object file
+stlReader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlReader.cpp.o
+.PHONY : stlReader.cpp.o
+
+stlReader.i: stlReader.cpp.i
+.PHONY : stlReader.i
+
+# target to preprocess a source file
+stlReader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlReader.cpp.i
+.PHONY : stlReader.cpp.i
+
+stlReader.s: stlReader.cpp.s
+.PHONY : stlReader.s
+
+# target to generate assembly for a file
+stlReader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlReader.cpp.s
+.PHONY : stlReader.cpp.s
+
+stlWriter.o: stlWriter.cpp.o
+.PHONY : stlWriter.o
+
+# target to build an object file
+stlWriter.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlWriter.cpp.o
+.PHONY : stlWriter.cpp.o
+
+stlWriter.i: stlWriter.cpp.i
+.PHONY : stlWriter.i
+
+# target to preprocess a source file
+stlWriter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlWriter.cpp.i
+.PHONY : stlWriter.cpp.i
+
+stlWriter.s: stlWriter.cpp.s
+.PHONY : stlWriter.s
+
+# target to generate assembly for a file
+stlWriter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlWriter.cpp.s
+.PHONY : stlWriter.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -162,9 +330,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... FileConverter"
+	@echo "... converter.o"
+	@echo "... converter.i"
+	@echo "... converter.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... stepConverter.o"
+	@echo "... stepConverter.i"
+	@echo "... stepConverter.s"
+	@echo "... stepReader.o"
+	@echo "... stepReader.i"
+	@echo "... stepReader.s"
+	@echo "... stepWriter.o"
+	@echo "... stepWriter.i"
+	@echo "... stepWriter.s"
+	@echo "... stlConverter.o"
+	@echo "... stlConverter.i"
+	@echo "... stlConverter.s"
+	@echo "... stlReader.o"
+	@echo "... stlReader.i"
+	@echo "... stlReader.s"
+	@echo "... stlWriter.o"
+	@echo "... stlWriter.i"
+	@echo "... stlWriter.s"
 .PHONY : help
 
 

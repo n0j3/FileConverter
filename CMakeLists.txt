@@ -3,5 +3,14 @@ project(FileConverter)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(FileConverter main.cpp)
-target_link_libraries(FileConverter)
+# Add the executable and include all necessary source files
+add_executable(FileConverter 
+    main.cpp 
+    converter.cpp 
+    stepConverter.cpp 
+    stepReader.cpp 
+    stepWriter.cpp 
+    stlConverter.cpp 
+    stlReader.cpp 
+    stlWriter.cpp
+)
