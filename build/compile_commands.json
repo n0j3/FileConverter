@@ -1,49 +1,49 @@
 [
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/main.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/main.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/main.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/main.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/main.cpp",
   "output": "CMakeFiles/FileConverter.dir/main.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/converter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/converter.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/converter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/converter.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/converter.cpp",
   "output": "CMakeFiles/FileConverter.dir/converter.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/stepConverter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepConverter.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stepConverter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepConverter.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stepConverter.cpp",
   "output": "CMakeFiles/FileConverter.dir/stepConverter.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/stepReader.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepReader.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stepReader.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepReader.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stepReader.cpp",
   "output": "CMakeFiles/FileConverter.dir/stepReader.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/stepWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stepWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp",
   "output": "CMakeFiles/FileConverter.dir/stepWriter.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/stlConverter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlConverter.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stlConverter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlConverter.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stlConverter.cpp",
   "output": "CMakeFiles/FileConverter.dir/stlConverter.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/stlReader.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlReader.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stlReader.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlReader.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stlReader.cpp",
   "output": "CMakeFiles/FileConverter.dir/stlReader.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=gnu++17 -o CMakeFiles/FileConverter.dir/stlWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlWriter.cpp",
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stlWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlWriter.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stlWriter.cpp",
   "output": "CMakeFiles/FileConverter.dir/stlWriter.cpp.o"
 }

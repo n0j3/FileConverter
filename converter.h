@@ -12,7 +12,7 @@
 class Converter {
 public:
     Converter();
-    bool convert(const std::string &inputPath, const std::string &outputPath);
+    bool convert(const std::string &inputPath, const std::string &outputPath, const bool &binary = true);
 
 private:
     bool hasValidExtension(const std::string &filePath, const std::string &extension) const;

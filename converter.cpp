@@ -8,7 +8,7 @@ bool Converter::hasValidExtension(const std::string &filePath, const std::string
            filePath.substr(filePath.size() - extension.size()) == extension;
 }
 
-bool Converter::convert(const std::string &inputPath, const std::string &outputPath) {
+bool Converter::convert(const std::string &inputPath, const std::string &outputPath, const bool &binary = true) {
     if (hasValidExtension(inputPath, ".stl") && hasValidExtension(outputPath, ".step")) {
         STL_Reader stlReader;
         if (!stlReader.read(inputPath) || stlReader.isCorrupt()) {
@@ -37,7 +37,7 @@ bool Converter::convert(const std::string &inputPath, const std::string &outputP
         Mesh mesh = stepConverter.convertToMesh(stepReader.getPointCloud());
 
         STL_Writer stlWriter;
-        if (!stlWriter.write(mesh, outputPath) || stlWriter.isCorrupt()) {
+        if (!stlWriter.writeSTL(mesh, outputPath, binary) || stlWriter.isCorrupt()) {
             std::cerr << "Failed to write STL file or the file is corrupt." << std::endl;
             return false;
         }

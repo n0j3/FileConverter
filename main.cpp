@@ -12,8 +12,10 @@ int main() {
     std::cout << "Provide output path: ";
     std::cin >> outputPath;
 
+    const bool binary = true;
+
     Converter converter;
-    if (!converter.convert(inputPath, outputPath)) {
+    if (!converter.convert(inputPath, outputPath, binary)) {
         return 1;
     }
 
