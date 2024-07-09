@@ -8,16 +8,20 @@
 class STEP_Reader {
 public:
     STEP_Reader();
-    bool read(const std::string &filePath);
-    bool isCorrupt() const;
 
+    const Mesh& getMesh() const;
     const std::vector<Point>& getPointCloud() const;
 
-private:
-    std::vector<Point> pointCloud;
-    bool corrupt;
+    bool isCorrupt() const;
+    bool read(const std::string &filePath);
 
+private:
     bool isValidSTEPFile(const std::string &filePath);
+
+    const Mesh mesh;
+    const std::vector<Point> pointCloud;
+
+    bool corrupt;
 };
 
 #endif // STEP_READER_H

@@ -17,8 +17,8 @@ public:
     bool read(const std::string &filePath);
     bool isCorrupt() const;
     
+    const Mesh& getMesh() const;
     const std::vector<Point>& getPointCloud() const;
-    const std::vector<Point>& getMesh() const;
 
 private:
     bool readBinarySTL(std::ifstream &file);
@@ -28,12 +28,12 @@ private:
     bool isBinarySTL(std::ifstream &file);
 
     std::vector<Point> getPointCloudFromASCIISTL(std::ifstream &file);
-    std::vector<Point> getMeshFromASCIISTL(std::ifstream &file);
+    Mesh getMeshFromASCIISTL(std::ifstream &file);
     std::vector<Point> getPointCloudFromBinarySTL(std::ifstream &file);
-    std::vector<Point> getMeshFromBinarySTL(std::ifstream &file);
+    Mesh getMeshFromBinarySTL(std::ifstream &file);
 
     std::vector<Point> pointCloud;
-    std::vector<Point> mesh;
+    Mesh mesh;
 
     bool corrupt;
 };

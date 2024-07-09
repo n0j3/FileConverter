@@ -177,29 +177,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-stepConverter.o: stepConverter.cpp.o
-.PHONY : stepConverter.o
+mesh.o: mesh.cpp.o
+.PHONY : mesh.o
 
 # target to build an object file
-stepConverter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepConverter.cpp.o
-.PHONY : stepConverter.cpp.o
+mesh.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/mesh.cpp.o
+.PHONY : mesh.cpp.o
 
-stepConverter.i: stepConverter.cpp.i
-.PHONY : stepConverter.i
+mesh.i: mesh.cpp.i
+.PHONY : mesh.i
 
 # target to preprocess a source file
-stepConverter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepConverter.cpp.i
-.PHONY : stepConverter.cpp.i
+mesh.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/mesh.cpp.i
+.PHONY : mesh.cpp.i
 
-stepConverter.s: stepConverter.cpp.s
-.PHONY : stepConverter.s
+mesh.s: mesh.cpp.s
+.PHONY : mesh.s
 
 # target to generate assembly for a file
-stepConverter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepConverter.cpp.s
-.PHONY : stepConverter.cpp.s
+mesh.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/mesh.cpp.s
+.PHONY : mesh.cpp.s
 
 stepReader.o: stepReader.cpp.o
 .PHONY : stepReader.o
@@ -248,30 +248,6 @@ stepWriter.s: stepWriter.cpp.s
 stepWriter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stepWriter.cpp.s
 .PHONY : stepWriter.cpp.s
-
-stlConverter.o: stlConverter.cpp.o
-.PHONY : stlConverter.o
-
-# target to build an object file
-stlConverter.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlConverter.cpp.o
-.PHONY : stlConverter.cpp.o
-
-stlConverter.i: stlConverter.cpp.i
-.PHONY : stlConverter.i
-
-# target to preprocess a source file
-stlConverter.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlConverter.cpp.i
-.PHONY : stlConverter.cpp.i
-
-stlConverter.s: stlConverter.cpp.s
-.PHONY : stlConverter.s
-
-# target to generate assembly for a file
-stlConverter.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/stlConverter.cpp.s
-.PHONY : stlConverter.cpp.s
 
 stlReader.o: stlReader.cpp.o
 .PHONY : stlReader.o
@@ -336,18 +312,15 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... stepConverter.o"
-	@echo "... stepConverter.i"
-	@echo "... stepConverter.s"
+	@echo "... mesh.o"
+	@echo "... mesh.i"
+	@echo "... mesh.s"
 	@echo "... stepReader.o"
 	@echo "... stepReader.i"
 	@echo "... stepReader.s"
 	@echo "... stepWriter.o"
 	@echo "... stepWriter.i"
 	@echo "... stepWriter.s"
-	@echo "... stlConverter.o"
-	@echo "... stlConverter.i"
-	@echo "... stlConverter.s"
 	@echo "... stlReader.o"
 	@echo "... stlReader.i"
 	@echo "... stlReader.s"

@@ -4,7 +4,7 @@
 
 STEP_Writer::STEP_Writer() : corrupt(false) {}
 
-bool STEP_Writer::write(const Mesh &mesh, const std::string &filePath) {
+bool STEP_Writer::writeSTEP(const Mesh &mesh, const std::string &filePath) {
     if (!isValidSTEPFile(filePath)) {
         std::cerr << "Invalid STEP file." << std::endl;
         corrupt = true;

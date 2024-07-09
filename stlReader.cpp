@@ -4,13 +4,13 @@
 STL_Reader::STL_Reader() : corrupt(false) {}
 
 
-const std::vector<Point>& STL_Reader::getMesh() const {
-    return mesh;
+const Mesh& STL_Reader::getMesh() const {
+    return this->mesh;
 }
 
 
 const std::vector<Point>& STL_Reader::getPointCloud() const {
-    return pointCloud;
+    return this->pointCloud;
 }
 
 
@@ -55,15 +55,15 @@ bool STL_Reader::read(const std::string &filePath) {
 
 
 // Private methods
-std::vector<Point> STL_Reader::getMeshFromASCIISTL(std::ifstream &file) {
-    std::vector<Point> mesh;
+Mesh STL_Reader::getMeshFromASCIISTL(std::ifstream &file) {
+    Mesh mesh;
     // Implement mesh extraction logic from ASCII STL if needed
     return mesh;
 }
 
 
-std::vector<Point> STL_Reader::getMeshFromBinarySTL(std::ifstream &file) {
-    std::vector<Point> mesh;
+Mesh STL_Reader::getMeshFromBinarySTL(std::ifstream &file) {
+    Mesh mesh;
     // Implement mesh extraction logic from binary STL if needed
     return mesh;
 }
@@ -119,6 +119,7 @@ bool STL_Reader::isASCIISTL(std::ifstream &file) {
     return firstWord == "solid";
 }
 
+
 bool STL_Reader::isBinarySTL(std::ifstream &file) {
     file.seekg(0, std::ios::beg); // Move to the beginning of the file
     std::string firstWord;
@@ -127,6 +128,7 @@ bool STL_Reader::isBinarySTL(std::ifstream &file) {
     file.seekg(0, std::ios::beg); // Rewind to the beginning again
     return firstWord != "solid";
 }
+
 
 bool STL_Reader::isValidSTLFilePath(const std::string &filePath) {
     return filePath.size() >= 4 && filePath.substr(filePath.size() - 4) == ".stl";
@@ -138,6 +140,7 @@ bool STL_Reader::readASCIISTL(std::ifstream &file) {
     mesh = getMeshFromASCIISTL(file);
     return true;
 }
+
 
 bool STL_Reader::readBinarySTL(std::ifstream &file) {
     pointCloud = getPointCloudFromBinarySTL(file);

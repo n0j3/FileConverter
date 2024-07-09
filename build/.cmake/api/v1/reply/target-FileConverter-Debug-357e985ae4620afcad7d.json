@@ -55,8 +55,7 @@
 				3,
 				4,
 				5,
-				6,
-				7
+				6
 			]
 		}
 	],
@@ -95,8 +94,7 @@
 				3,
 				4,
 				5,
-				6,
-				7
+				6
 			]
 		}
 	],
@@ -111,13 +109,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "converter.cpp",
+			"path" : "mesh.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "stepConverter.cpp",
+			"path" : "converter.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -130,12 +128,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "stepWriter.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "stlConverter.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

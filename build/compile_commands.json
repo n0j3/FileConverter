@@ -7,15 +7,15 @@
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/converter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/converter.cpp",
-  "file": "/home/n0j3/Documents/Repos/FileConverter/converter.cpp",
-  "output": "CMakeFiles/FileConverter.dir/converter.cpp.o"
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/mesh.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/mesh.cpp",
+  "file": "/home/n0j3/Documents/Repos/FileConverter/mesh.cpp",
+  "output": "CMakeFiles/FileConverter.dir/mesh.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stepConverter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepConverter.cpp",
-  "file": "/home/n0j3/Documents/Repos/FileConverter/stepConverter.cpp",
-  "output": "CMakeFiles/FileConverter.dir/stepConverter.cpp.o"
+  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/converter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/converter.cpp",
+  "file": "/home/n0j3/Documents/Repos/FileConverter/converter.cpp",
+  "output": "CMakeFiles/FileConverter.dir/converter.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
@@ -28,12 +28,6 @@
   "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stepWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp",
   "file": "/home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp",
   "output": "CMakeFiles/FileConverter.dir/stepWriter.cpp.o"
-},
-{
-  "directory": "/home/n0j3/Documents/Repos/FileConverter/build",
-  "command": "/usr/bin/c++   -g -std=c++20 -o CMakeFiles/FileConverter.dir/stlConverter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlConverter.cpp",
-  "file": "/home/n0j3/Documents/Repos/FileConverter/stlConverter.cpp",
-  "output": "CMakeFiles/FileConverter.dir/stlConverter.cpp.o"
 },
 {
   "directory": "/home/n0j3/Documents/Repos/FileConverter/build",

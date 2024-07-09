@@ -20,8 +20,12 @@ bool STEP_Reader::isCorrupt() const {
     return corrupt;
 }
 
+const Mesh& STEP_Reader::getMesh() const {
+    return this->mesh;
+}
+
 const std::vector<Point>& STEP_Reader::getPointCloud() const {
-    return pointCloud;
+    return this->pointCloud;
 }
 
 bool STEP_Reader::isValidSTEPFile(const std::string &filePath) {

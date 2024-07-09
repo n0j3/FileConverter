@@ -7,7 +7,7 @@
 class STEP_Writer {
 public:
     STEP_Writer();
-    bool write(const Mesh &mesh, const std::string &filePath);
+    bool writeSTEP(const Mesh &mesh, const std::string &filePath);
     bool isCorrupt() const;
 
 private:

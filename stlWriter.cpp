@@ -8,20 +8,59 @@
 STL_Writer::STL_Writer() {}
 
 
-bool STL_Writer::writeSTL(const Mesh &mesh, const std::string &filePath, const bool &binary = true) {
+// Public methods
+bool STL_Writer::isCorrupt() const {
+    return corrupt;
+}
+
+
+bool STL_Writer::writeSTL(const Mesh &mesh, const std::string &filePath, const bool &binary) {
+    this->binary = binary;
+
     if (!isValidSTLFilePath(filePath)) {
         std::cerr << "Invalid STL file." << std::endl;
         corrupt = true;
         return false;
     }
 
-    if (binary) {
+    if (this->binary) {
         return writeBinarySTL(filePath, mesh);
     }
     
     else {
         return writeASCIISTL(filePath, mesh);
     }
+}
+
+
+// Private methods
+bool STL_Writer::isValidSTLFilePath(const std::string &filePath) {
+    return filePath.size() >= 4 && filePath.substr(filePath.size() - 4) == ".stl";
+}
+
+
+bool STL_Writer::writeASCIISTL(const std::string &filePath, const Mesh &mesh) {
+    std::ofstream file(filePath);
+    if (!file) {
+        std::cerr << "Failed to open file for writing." << std::endl;
+        corrupt = false;
+        return false;
+    }
+
+    file << "solid ascii_stl" << std::endl;
+    for (size_t i = 0; Face face : mesh.faces) {
+        file << "  facet normal " << face.facet.x << " " << face.facet.y << " " << face.facet.z << std::endl;
+        file << "    outer loop" << std::endl;
+        file << "      vertex " << face.vertices[1].x << " " << face.vertices[1].y << " " << face.vertices[1].z << std::endl;
+        file << "      vertex " << face.vertices[2].x << " " << face.vertices[2].y << " " << face.vertices[2].z << std::endl;
+        file << "      vertex " << face.vertices[3].x << " " << face.vertices[3].y << " " << face.vertices[3].z << std::endl;
+        file << "    endloop" << std::endl;
+        file << "  endfacet" << std::endl;
+    }
+    file << "endsolid ascii_stl" << std::endl;
+
+    corrupt = false;
+    return true;
 }
 
 
@@ -55,39 +94,4 @@ bool STL_Writer::writeBinarySTL(const std::string &filePath, const Mesh &mesh) {
     
     corrupt = false;
     return true;
-}
-
-
-bool STL_Writer::writeASCIISTL(const std::string &filePath, const Mesh &mesh) {
-    std::ofstream file(filePath);
-    if (!file) {
-        std::cerr << "Failed to open file for writing." << std::endl;
-        corrupt = false;
-        return false;
-    }
-
-    file << "solid ascii_stl" << std::endl;
-    for (size_t i = 0; Face face : mesh.faces) {
-        file << "  facet normal " << face.facet.x << " " << face.facet.y << " " << face.facet.z << std::endl;
-        file << "    outer loop" << std::endl;
-        file << "      vertex " << face.vertices[1].x << " " << face.vertices[1].y << " " << face.vertices[1].z << std::endl;
-        file << "      vertex " << face.vertices[2].x << " " << face.vertices[2].y << " " << face.vertices[2].z << std::endl;
-        file << "      vertex " << face.vertices[3].x << " " << face.vertices[3].y << " " << face.vertices[3].z << std::endl;
-        file << "    endloop" << std::endl;
-        file << "  endfacet" << std::endl;
-    }
-    file << "endsolid ascii_stl" << std::endl;
-
-    corrupt = false;
-    return true;
-}
-
-
-bool STL_Writer::isValidSTLFilePath(const std::string &filePath) {
-    return filePath.size() >= 4 && filePath.substr(filePath.size() - 4) == ".stl";
-}
-
-
-bool STL_Writer::isCorrupt() const {
-    return corrupt;
 }
