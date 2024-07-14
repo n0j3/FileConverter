@@ -16,8 +16,8 @@ public:
 
     Part& getPart();
 
-    bool readSTL(const std::string &filePath, Part &part);
     bool isCorrupt() const;
+    bool readSTL(const std::string &filePath, Part &part);
 
 private:
     bool isASCIISTL(std::ifstream &file);

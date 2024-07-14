@@ -11,9 +11,11 @@ public:
     bool isCorrupt() const;
 
 private:
-    bool corrupt;
-
     bool isValidSTEPFile(const std::string &filePath);
+    bool writeAP203STEP(const std::string &filePath, const Part &Part);
+    bool writeAP214STEP(const std::string &filePath, const Part &Part);
+
+    bool corrupt;
 };
 
 #endif // STEP_WRITER_H

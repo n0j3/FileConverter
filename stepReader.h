@@ -15,7 +15,11 @@ public:
     bool readSTEP(const std::string &filePath, Part part);
 
 private:
+    bool isAP203STEP(std::ifstream &file);
+    bool isAP214STEP(std::ifstream &file);
     bool isValidSTEPFile(const std::string &filePath);
+    bool readAP203STEP(std::ifstream &file, Part &part);
+    bool readAP214STEP(std::ifstream &file, Part &part);
 
     Part part;
 

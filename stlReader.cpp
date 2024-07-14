@@ -1,9 +1,11 @@
 #include "stlReader.h"
 
-// Public methods
+
+// Constructor
 STL_Reader::STL_Reader() : corrupt(true) {}
 
 
+// Public methods
 Part& STL_Reader::getPart() {
     return part;
 }
@@ -19,7 +21,7 @@ bool STL_Reader::readSTL(const std::string &filePath, Part &part) {
     std::ifstream file(filePath, std::ios::binary);
 
     if (!file) {
-        std::cerr << "Failed to open file." << std::endl;
+        std::cerr << "Failed to open STL file for reading." << std::endl;
         corrupt = true;
         return false;
     }
@@ -54,6 +56,7 @@ bool STL_Reader::isCorrupt() const {
 }
 
 
+// Private methods
 bool STL_Reader::isASCIISTL(std::ifstream &file) {
     file.seekg(0, std::ios::beg); // Move to the beginning of the file
     std::string firstWord;
@@ -104,6 +107,7 @@ bool STL_Reader::readASCIISTL(std::ifstream &file, Part &part) {
         }
     }
 
+    corrupt = false;
     return true;
 }
 
@@ -139,6 +143,8 @@ bool STL_Reader::readBinarySTL(std::ifstream &file, Part &part) {
 
         part.addFace(face);
     }
+
+    corrupt = false;
     return true;
 }
 

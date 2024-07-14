@@ -24,7 +24,7 @@ bool STL_Writer::writeSTL(const Part &part, const std::string &filePath, const b
         return false;
     }
 
-    if (this->binary) {
+    if (binary) {
         return writeBinarySTL(filePath, part);
     }
     
@@ -43,8 +43,8 @@ bool STL_Writer::isValidSTLFilePath(const std::string &filePath) {
 bool STL_Writer::writeASCIISTL(const std::string &filePath, const Part &Part) {
     std::ofstream file(filePath);
     if (!file) {
-        std::cerr << "Failed to open file for writing." << std::endl;
-        corrupt = false;
+        std::cerr << "Failed to open STL file for writing." << std::endl;
+        corrupt = true;
         return false;
     }
 
@@ -58,6 +58,7 @@ bool STL_Writer::writeASCIISTL(const std::string &filePath, const Part &Part) {
         file << "    endloop" << std::endl;
         file << "  endfacet" << std::endl;
     }
+    
     file << "endsolid" << std::endl;
 
     corrupt = false;
@@ -68,8 +69,8 @@ bool STL_Writer::writeASCIISTL(const std::string &filePath, const Part &Part) {
 bool STL_Writer::writeBinarySTL(const std::string &filePath, const Part &Part) {
     std::ofstream file(filePath, std::ios::binary);
     if (!file) {
-        std::cerr << "Failed to open file for writing." << std::endl;
-        corrupt = false;
+        std::cerr << "Failed to open STL file for writing." << std::endl;
+        corrupt = true;
         return false;
     }
 
@@ -80,17 +81,13 @@ bool STL_Writer::writeBinarySTL(const std::string &filePath, const Part &Part) {
     file.write(reinterpret_cast<char*>(&numTriangles), sizeof(numTriangles));
 
     for (size_t i = 0; Face face : Part.faces) {
-        float nx = face.facet.x, ny = face.facet.y, nz = face.facet.z; // Normal vector
-        file.write(reinterpret_cast<char*>(&nx), sizeof(float));
-        file.write(reinterpret_cast<char*>(&ny), sizeof(float));
-        file.write(reinterpret_cast<char*>(&nz), sizeof(float));
+        file.write(reinterpret_cast<char*>(&face.facet), sizeof(Point));
 
         file.write(reinterpret_cast<const char*>(&face.vertices[1]), sizeof(Point));
         file.write(reinterpret_cast<const char*>(&face.vertices[2]), sizeof(Point));
         file.write(reinterpret_cast<const char*>(&face.vertices[3]), sizeof(Point));
 
-        uint16_t attributeByteCount = 0;
-        file.write(reinterpret_cast<char*>(&attributeByteCount), sizeof(attributeByteCount));
+        file.write(reinterpret_cast<char*>(&face.attribute), sizeof(u_int16_t));
     }
     
     corrupt = false;

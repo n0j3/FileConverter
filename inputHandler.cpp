@@ -60,7 +60,7 @@ bool InputHandler::simulateInput(std::string &inputDir, std::string &inputFile,
     inputFile = "stlASCII.stl";
     outputDir = "/home/n0j3/OneDrive/Dokumente/03_Projekte/FileConverter";
     outputFile = "output_stlASCII.stl";
-    binary = false;
+    binary = true;
     ap214 = true;
 
     printPaths(inputDir, inputFile, outputDir, outputFile, binary, ap214);
@@ -77,7 +77,7 @@ bool InputHandler::printPaths(std::string& inputDir, std::string& inputFile,
     std::cout << "Output Directory:    " << outputDir << "\n";
     std::cout << "Output File:         " << outputFile << "\n";
     std::cout << "Output as Binary:    " << std::boolalpha << binary << "\n";
-    std::cout << "Output as AP214:     " << std::boolalpha << binary << "\n";
+    std::cout << "Output as AP214:     " << std::boolalpha << ap214 << "\n";
     return true; // Assuming printing always succeeds
 }
 
