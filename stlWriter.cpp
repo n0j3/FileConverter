@@ -1,5 +1,6 @@
 #include <fstream>
 #include <iostream>
+#include <iomanip>
 #include <sstream>
 #include <cstdint>
 #include <cstring>
@@ -14,7 +15,7 @@ bool STL_Writer::isCorrupt() const {
 }
 
 
-bool STL_Writer::writeSTL(const Mesh &mesh, const std::string &filePath, const bool &binary) {
+bool STL_Writer::writeSTL(const Part &part, const std::string &filePath, const bool &binary) {
     this->binary = binary;
 
     if (!isValidSTLFilePath(filePath)) {
@@ -24,11 +25,11 @@ bool STL_Writer::writeSTL(const Mesh &mesh, const std::string &filePath, const b
     }
 
     if (this->binary) {
-        return writeBinarySTL(filePath, mesh);
+        return writeBinarySTL(filePath, part);
     }
     
     else {
-        return writeASCIISTL(filePath, mesh);
+        return writeASCIISTL(filePath, part);
     }
 }
 
@@ -39,7 +40,7 @@ bool STL_Writer::isValidSTLFilePath(const std::string &filePath) {
 }
 
 
-bool STL_Writer::writeASCIISTL(const std::string &filePath, const Mesh &mesh) {
+bool STL_Writer::writeASCIISTL(const std::string &filePath, const Part &Part) {
     std::ofstream file(filePath);
     if (!file) {
         std::cerr << "Failed to open file for writing." << std::endl;
@@ -47,24 +48,24 @@ bool STL_Writer::writeASCIISTL(const std::string &filePath, const Mesh &mesh) {
         return false;
     }
 
-    file << "solid ascii_stl" << std::endl;
-    for (size_t i = 0; Face face : mesh.faces) {
-        file << "  facet normal " << face.facet.x << " " << face.facet.y << " " << face.facet.z << std::endl;
+    file << "solid ascii" << std::endl;
+    for (size_t i = 0; Face face : Part.faces) {
+        file << "  facet normal " << std::scientific << std::setprecision(6) << face.facet.x << " " << face.facet.y << " " << face.facet.z << std::endl;
         file << "    outer loop" << std::endl;
-        file << "      vertex " << face.vertices[1].x << " " << face.vertices[1].y << " " << face.vertices[1].z << std::endl;
-        file << "      vertex " << face.vertices[2].x << " " << face.vertices[2].y << " " << face.vertices[2].z << std::endl;
-        file << "      vertex " << face.vertices[3].x << " " << face.vertices[3].y << " " << face.vertices[3].z << std::endl;
+        file << "      vertex   " << face.vertices[0].x << " " << face.vertices[0].y << " " << face.vertices[0].z << std::endl;
+        file << "      vertex   " << face.vertices[1].x << " " << face.vertices[1].y << " " << face.vertices[1].z << std::endl;
+        file << "      vertex   " << face.vertices[2].x << " " << face.vertices[2].y << " " << face.vertices[2].z << std::endl;
         file << "    endloop" << std::endl;
         file << "  endfacet" << std::endl;
     }
-    file << "endsolid ascii_stl" << std::endl;
+    file << "endsolid" << std::endl;
 
     corrupt = false;
     return true;
 }
 
 
-bool STL_Writer::writeBinarySTL(const std::string &filePath, const Mesh &mesh) {
+bool STL_Writer::writeBinarySTL(const std::string &filePath, const Part &Part) {
     std::ofstream file(filePath, std::ios::binary);
     if (!file) {
         std::cerr << "Failed to open file for writing." << std::endl;
@@ -75,10 +76,10 @@ bool STL_Writer::writeBinarySTL(const std::string &filePath, const Mesh &mesh) {
     char header[80] = {};
     file.write(header, 80);
 
-    uint32_t numTriangles = mesh.getFaces().size();
+    uint32_t numTriangles = Part.getFaces().size();
     file.write(reinterpret_cast<char*>(&numTriangles), sizeof(numTriangles));
 
-    for (size_t i = 0; Face face : mesh.faces) {
+    for (size_t i = 0; Face face : Part.faces) {
         float nx = face.facet.x, ny = face.facet.y, nz = face.facet.z; // Normal vector
         file.write(reinterpret_cast<char*>(&nx), sizeof(float));
         file.write(reinterpret_cast<char*>(&ny), sizeof(float));

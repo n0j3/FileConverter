@@ -81,12 +81,12 @@ clean: CMakeFiles/FileConverter.dir/clean
 CMakeFiles/FileConverter.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target FileConverter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target FileConverter"
 .PHONY : CMakeFiles/FileConverter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FileConverter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/FileConverter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles 0
 .PHONY : CMakeFiles/FileConverter.dir/rule

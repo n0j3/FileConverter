@@ -8,8 +8,9 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 # Add the executable and include all necessary source files
 add_executable(FileConverter 
     main.cpp
-    mesh.cpp
+    part.cpp
     converter.cpp 
+    inputHandler.cpp
     stepReader.cpp 
     stepWriter.cpp 
     stlReader.cpp 

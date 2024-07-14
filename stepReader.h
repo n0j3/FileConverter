@@ -3,23 +3,21 @@
 
 #include <string>
 #include <vector>
-#include "mesh.h"
+#include "part.h"
 
 class STEP_Reader {
 public:
     STEP_Reader();
 
-    const Mesh& getMesh() const;
-    const std::vector<Point>& getPointCloud() const;
+    Part& getPart();
 
     bool isCorrupt() const;
-    bool read(const std::string &filePath);
+    bool readSTEP(const std::string &filePath, Part part);
 
 private:
     bool isValidSTEPFile(const std::string &filePath);
 
-    const Mesh mesh;
-    const std::vector<Point> pointCloud;
+    Part part;
 
     bool corrupt;
 };

@@ -4,14 +4,14 @@
 
 STEP_Writer::STEP_Writer() : corrupt(false) {}
 
-bool STEP_Writer::writeSTEP(const Mesh &mesh, const std::string &filePath) {
+bool STEP_Writer::writeSTEP(const Part &part, const std::string &filePath, bool &stepType) {
     if (!isValidSTEPFile(filePath)) {
         std::cerr << "Invalid STEP file." << std::endl;
         corrupt = true;
         return false;
     }
 
-    // Implementation to write the mesh to a STEP file
+    // Implementation to write the Part to a STEP file
     corrupt = false; // Set this to true if corruption occurs
     return true;
 }

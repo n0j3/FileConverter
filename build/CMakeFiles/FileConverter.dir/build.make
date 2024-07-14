@@ -83,19 +83,19 @@ CMakeFiles/FileConverter.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileConverter.dir/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/n0j3/Documents/Repos/FileConverter/main.cpp -o CMakeFiles/FileConverter.dir/main.cpp.s
 
-CMakeFiles/FileConverter.dir/mesh.cpp.o: CMakeFiles/FileConverter.dir/flags.make
-CMakeFiles/FileConverter.dir/mesh.cpp.o: /home/n0j3/Documents/Repos/FileConverter/mesh.cpp
-CMakeFiles/FileConverter.dir/mesh.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FileConverter.dir/mesh.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/mesh.cpp.o -MF CMakeFiles/FileConverter.dir/mesh.cpp.o.d -o CMakeFiles/FileConverter.dir/mesh.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/mesh.cpp
+CMakeFiles/FileConverter.dir/part.cpp.o: CMakeFiles/FileConverter.dir/flags.make
+CMakeFiles/FileConverter.dir/part.cpp.o: /home/n0j3/Documents/Repos/FileConverter/part.cpp
+CMakeFiles/FileConverter.dir/part.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FileConverter.dir/part.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/part.cpp.o -MF CMakeFiles/FileConverter.dir/part.cpp.o.d -o CMakeFiles/FileConverter.dir/part.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/part.cpp
 
-CMakeFiles/FileConverter.dir/mesh.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileConverter.dir/mesh.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/n0j3/Documents/Repos/FileConverter/mesh.cpp > CMakeFiles/FileConverter.dir/mesh.cpp.i
+CMakeFiles/FileConverter.dir/part.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileConverter.dir/part.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/n0j3/Documents/Repos/FileConverter/part.cpp > CMakeFiles/FileConverter.dir/part.cpp.i
 
-CMakeFiles/FileConverter.dir/mesh.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileConverter.dir/mesh.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/n0j3/Documents/Repos/FileConverter/mesh.cpp -o CMakeFiles/FileConverter.dir/mesh.cpp.s
+CMakeFiles/FileConverter.dir/part.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileConverter.dir/part.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/n0j3/Documents/Repos/FileConverter/part.cpp -o CMakeFiles/FileConverter.dir/part.cpp.s
 
 CMakeFiles/FileConverter.dir/converter.cpp.o: CMakeFiles/FileConverter.dir/flags.make
 CMakeFiles/FileConverter.dir/converter.cpp.o: /home/n0j3/Documents/Repos/FileConverter/converter.cpp
@@ -111,10 +111,24 @@ CMakeFiles/FileConverter.dir/converter.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileConverter.dir/converter.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/n0j3/Documents/Repos/FileConverter/converter.cpp -o CMakeFiles/FileConverter.dir/converter.cpp.s
 
+CMakeFiles/FileConverter.dir/inputHandler.cpp.o: CMakeFiles/FileConverter.dir/flags.make
+CMakeFiles/FileConverter.dir/inputHandler.cpp.o: /home/n0j3/Documents/Repos/FileConverter/inputHandler.cpp
+CMakeFiles/FileConverter.dir/inputHandler.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FileConverter.dir/inputHandler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/inputHandler.cpp.o -MF CMakeFiles/FileConverter.dir/inputHandler.cpp.o.d -o CMakeFiles/FileConverter.dir/inputHandler.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/inputHandler.cpp
+
+CMakeFiles/FileConverter.dir/inputHandler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileConverter.dir/inputHandler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/n0j3/Documents/Repos/FileConverter/inputHandler.cpp > CMakeFiles/FileConverter.dir/inputHandler.cpp.i
+
+CMakeFiles/FileConverter.dir/inputHandler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileConverter.dir/inputHandler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/n0j3/Documents/Repos/FileConverter/inputHandler.cpp -o CMakeFiles/FileConverter.dir/inputHandler.cpp.s
+
 CMakeFiles/FileConverter.dir/stepReader.cpp.o: CMakeFiles/FileConverter.dir/flags.make
 CMakeFiles/FileConverter.dir/stepReader.cpp.o: /home/n0j3/Documents/Repos/FileConverter/stepReader.cpp
 CMakeFiles/FileConverter.dir/stepReader.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FileConverter.dir/stepReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FileConverter.dir/stepReader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/stepReader.cpp.o -MF CMakeFiles/FileConverter.dir/stepReader.cpp.o.d -o CMakeFiles/FileConverter.dir/stepReader.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepReader.cpp
 
 CMakeFiles/FileConverter.dir/stepReader.cpp.i: cmake_force
@@ -128,7 +142,7 @@ CMakeFiles/FileConverter.dir/stepReader.cpp.s: cmake_force
 CMakeFiles/FileConverter.dir/stepWriter.cpp.o: CMakeFiles/FileConverter.dir/flags.make
 CMakeFiles/FileConverter.dir/stepWriter.cpp.o: /home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp
 CMakeFiles/FileConverter.dir/stepWriter.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FileConverter.dir/stepWriter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FileConverter.dir/stepWriter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/stepWriter.cpp.o -MF CMakeFiles/FileConverter.dir/stepWriter.cpp.o.d -o CMakeFiles/FileConverter.dir/stepWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp
 
 CMakeFiles/FileConverter.dir/stepWriter.cpp.i: cmake_force
@@ -142,7 +156,7 @@ CMakeFiles/FileConverter.dir/stepWriter.cpp.s: cmake_force
 CMakeFiles/FileConverter.dir/stlReader.cpp.o: CMakeFiles/FileConverter.dir/flags.make
 CMakeFiles/FileConverter.dir/stlReader.cpp.o: /home/n0j3/Documents/Repos/FileConverter/stlReader.cpp
 CMakeFiles/FileConverter.dir/stlReader.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FileConverter.dir/stlReader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FileConverter.dir/stlReader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/stlReader.cpp.o -MF CMakeFiles/FileConverter.dir/stlReader.cpp.o.d -o CMakeFiles/FileConverter.dir/stlReader.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlReader.cpp
 
 CMakeFiles/FileConverter.dir/stlReader.cpp.i: cmake_force
@@ -156,7 +170,7 @@ CMakeFiles/FileConverter.dir/stlReader.cpp.s: cmake_force
 CMakeFiles/FileConverter.dir/stlWriter.cpp.o: CMakeFiles/FileConverter.dir/flags.make
 CMakeFiles/FileConverter.dir/stlWriter.cpp.o: /home/n0j3/Documents/Repos/FileConverter/stlWriter.cpp
 CMakeFiles/FileConverter.dir/stlWriter.cpp.o: CMakeFiles/FileConverter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FileConverter.dir/stlWriter.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/FileConverter.dir/stlWriter.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileConverter.dir/stlWriter.cpp.o -MF CMakeFiles/FileConverter.dir/stlWriter.cpp.o.d -o CMakeFiles/FileConverter.dir/stlWriter.cpp.o -c /home/n0j3/Documents/Repos/FileConverter/stlWriter.cpp
 
 CMakeFiles/FileConverter.dir/stlWriter.cpp.i: cmake_force
@@ -170,8 +184,9 @@ CMakeFiles/FileConverter.dir/stlWriter.cpp.s: cmake_force
 # Object files for target FileConverter
 FileConverter_OBJECTS = \
 "CMakeFiles/FileConverter.dir/main.cpp.o" \
-"CMakeFiles/FileConverter.dir/mesh.cpp.o" \
+"CMakeFiles/FileConverter.dir/part.cpp.o" \
 "CMakeFiles/FileConverter.dir/converter.cpp.o" \
+"CMakeFiles/FileConverter.dir/inputHandler.cpp.o" \
 "CMakeFiles/FileConverter.dir/stepReader.cpp.o" \
 "CMakeFiles/FileConverter.dir/stepWriter.cpp.o" \
 "CMakeFiles/FileConverter.dir/stlReader.cpp.o" \
@@ -181,15 +196,16 @@ FileConverter_OBJECTS = \
 FileConverter_EXTERNAL_OBJECTS =
 
 FileConverter: CMakeFiles/FileConverter.dir/main.cpp.o
-FileConverter: CMakeFiles/FileConverter.dir/mesh.cpp.o
+FileConverter: CMakeFiles/FileConverter.dir/part.cpp.o
 FileConverter: CMakeFiles/FileConverter.dir/converter.cpp.o
+FileConverter: CMakeFiles/FileConverter.dir/inputHandler.cpp.o
 FileConverter: CMakeFiles/FileConverter.dir/stepReader.cpp.o
 FileConverter: CMakeFiles/FileConverter.dir/stepWriter.cpp.o
 FileConverter: CMakeFiles/FileConverter.dir/stlReader.cpp.o
 FileConverter: CMakeFiles/FileConverter.dir/stlWriter.cpp.o
 FileConverter: CMakeFiles/FileConverter.dir/build.make
 FileConverter: CMakeFiles/FileConverter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable FileConverter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/n0j3/Documents/Repos/FileConverter/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable FileConverter"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/FileConverter.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

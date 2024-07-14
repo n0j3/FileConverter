@@ -153,6 +153,30 @@ converter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/converter.cpp.s
 .PHONY : converter.cpp.s
 
+inputHandler.o: inputHandler.cpp.o
+.PHONY : inputHandler.o
+
+# target to build an object file
+inputHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/inputHandler.cpp.o
+.PHONY : inputHandler.cpp.o
+
+inputHandler.i: inputHandler.cpp.i
+.PHONY : inputHandler.i
+
+# target to preprocess a source file
+inputHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/inputHandler.cpp.i
+.PHONY : inputHandler.cpp.i
+
+inputHandler.s: inputHandler.cpp.s
+.PHONY : inputHandler.s
+
+# target to generate assembly for a file
+inputHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/inputHandler.cpp.s
+.PHONY : inputHandler.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -177,29 +201,29 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mesh.o: mesh.cpp.o
-.PHONY : mesh.o
+part.o: part.cpp.o
+.PHONY : part.o
 
 # target to build an object file
-mesh.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/mesh.cpp.o
-.PHONY : mesh.cpp.o
+part.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/part.cpp.o
+.PHONY : part.cpp.o
 
-mesh.i: mesh.cpp.i
-.PHONY : mesh.i
+part.i: part.cpp.i
+.PHONY : part.i
 
 # target to preprocess a source file
-mesh.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/mesh.cpp.i
-.PHONY : mesh.cpp.i
+part.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/part.cpp.i
+.PHONY : part.cpp.i
 
-mesh.s: mesh.cpp.s
-.PHONY : mesh.s
+part.s: part.cpp.s
+.PHONY : part.s
 
 # target to generate assembly for a file
-mesh.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/mesh.cpp.s
-.PHONY : mesh.cpp.s
+part.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/FileConverter.dir/build.make CMakeFiles/FileConverter.dir/part.cpp.s
+.PHONY : part.cpp.s
 
 stepReader.o: stepReader.cpp.o
 .PHONY : stepReader.o
@@ -309,12 +333,15 @@ help:
 	@echo "... converter.o"
 	@echo "... converter.i"
 	@echo "... converter.s"
+	@echo "... inputHandler.o"
+	@echo "... inputHandler.i"
+	@echo "... inputHandler.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mesh.o"
-	@echo "... mesh.i"
-	@echo "... mesh.s"
+	@echo "... part.o"
+	@echo "... part.i"
+	@echo "... part.s"
 	@echo "... stepReader.o"
 	@echo "... stepReader.i"
 	@echo "... stepReader.s"

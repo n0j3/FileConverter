@@ -9,8 +9,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/n0j3/Documents/Repos/FileConverter/converter.cpp" "CMakeFiles/FileConverter.dir/converter.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/converter.cpp.o.d"
+  "/home/n0j3/Documents/Repos/FileConverter/inputHandler.cpp" "CMakeFiles/FileConverter.dir/inputHandler.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/inputHandler.cpp.o.d"
   "/home/n0j3/Documents/Repos/FileConverter/main.cpp" "CMakeFiles/FileConverter.dir/main.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/main.cpp.o.d"
-  "/home/n0j3/Documents/Repos/FileConverter/mesh.cpp" "CMakeFiles/FileConverter.dir/mesh.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/mesh.cpp.o.d"
+  "/home/n0j3/Documents/Repos/FileConverter/part.cpp" "CMakeFiles/FileConverter.dir/part.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/part.cpp.o.d"
   "/home/n0j3/Documents/Repos/FileConverter/stepReader.cpp" "CMakeFiles/FileConverter.dir/stepReader.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/stepReader.cpp.o.d"
   "/home/n0j3/Documents/Repos/FileConverter/stepWriter.cpp" "CMakeFiles/FileConverter.dir/stepWriter.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/stepWriter.cpp.o.d"
   "/home/n0j3/Documents/Repos/FileConverter/stlReader.cpp" "CMakeFiles/FileConverter.dir/stlReader.cpp.o" "gcc" "CMakeFiles/FileConverter.dir/stlReader.cpp.o.d"

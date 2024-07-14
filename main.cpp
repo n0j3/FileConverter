@@ -1,34 +1,35 @@
-#include <iostream>
-#include <string>
 #include "converter.h"
+#include <cstdio> // For printf
 
 int main() {
-    std::string inputDir;
-    std::string outputDir;
-    std::string inputFile;
-    std::string outputFile;
-
-    std::cout << "Provide input directory: ";
-    std::cin >> inputDir;
-
-    std::cout << "Provide input file: ";
-    std::cin >> inputFile;
-
-    std::cout << "Provide output directory: ";
-    std::cin >> outputDir;
-
-    std::cout << "Provide output file: ";
-    std::cin >> outputFile;
-
-    const bool binary = true;
-
     Converter converter;
-    if (!converter.validateInputs(inputFile, outputFile, inputDir, outputDir, binary)) {
+
+    if (!converter.inputs()) {
+        printf("inputs() failed\n");
         return 1;
+    } else {
+        printf("inputs() succeeded\n");
     }
 
-    if (!converter.convert()) {
-        return 2;
+    if (!converter.readFile()) {
+        printf("readFile() failed\n");
+        return 1;
+    } else {
+        printf("readFile() succeeded\n");
+    }
+
+    if (!converter.showFile()) {
+        printf("showFile() failed\n");
+        return 1;
+    } else {
+        printf("showFile() succeeded\n");
+    }
+
+    if (!converter.writeFile()) {
+        printf("writeFile() failed\n");
+        return 1;
+    } else {
+        printf("writeFile() succeeded\n");
     }
 
     return 0;

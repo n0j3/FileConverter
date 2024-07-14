@@ -2,12 +2,12 @@
 #define STEP_WRITER_H
 
 #include <string>
-#include "mesh.h"
+#include "part.h"
 
 class STEP_Writer {
 public:
     STEP_Writer();
-    bool writeSTEP(const Mesh &mesh, const std::string &filePath);
+    bool writeSTEP(const Part &part, const std::string &filePath, bool &stepType);
     bool isCorrupt() const;
 
 private:

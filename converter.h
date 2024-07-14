@@ -2,26 +2,37 @@
 #define CONVERTER_H
 
 #include <string>
+#include "extension.h"
+#include "inputHandler.h"
+#include "part.h"
 #include "stepReader.h"
 #include "stepWriter.h"
 #include "stlReader.h"
 #include "stlWriter.h"
-#include "extension.h"
+
 
 class Converter {
 public:
     Converter();
-    bool convert();
-    bool validateInputs(const std::string &inputFile, const std::string &outputFile, const std::string &inputDir, const std::string &outputDir, bool binary = true);
+    bool inputs();
+    bool readFile();
+    bool showFile();
+    bool writeFile();
 
 private:
-    Extension hasValidExtension(const std::string &file);
-    bool mergePath(std::string &file, const std::string &dir, bool input);
+    Extension defineExtension(const std::string &file);
+    std::string joinPaths(const std::string& dir, const std::string& file);
 
-    std::string input;
-    std::string output;
+    Part part;
     Extension inputType;
     Extension outputType;
+
+    std::string inputDir;
+    std::string inputFile;
+    std::string outputDir;
+    std::string outputFile;
+
+    bool ap214;
     bool binary;
 };
 

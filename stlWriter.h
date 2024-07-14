@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-#include "mesh.h"
+#include "part.h"
 
 
 class STL_Writer {
@@ -11,12 +11,12 @@ public:
     STL_Writer();
 
     bool isCorrupt() const;
-    bool writeSTL(const Mesh &mesh, const std::string &filePath, const bool &binary = true);
+    bool writeSTL(const Part &part, const std::string &filePath, const bool &binary = true);
 
 private:
     bool isValidSTLFilePath(const std::string &filePath);
-    bool writeBinarySTL(const std::string &filePath, const Mesh &mesh);
-    bool writeASCIISTL(const std::string &filePath, const Mesh &mesh);
+    bool writeBinarySTL(const std::string &filePath, const Part &Part);
+    bool writeASCIISTL(const std::string &filePath, const Part &Part);
 
     bool binary;
     bool corrupt;

@@ -2,9 +2,9 @@
 #include <fstream>
 #include <iostream>
 
-STEP_Reader::STEP_Reader() : corrupt(false) {}
+STEP_Reader::STEP_Reader() : corrupt(true) {}
 
-bool STEP_Reader::read(const std::string &filePath) {
+bool STEP_Reader::readSTEP(const std::string &filePath, Part part) {
     if (!isValidSTEPFile(filePath)) {
         std::cerr << "Invalid STEP file." << std::endl;
         corrupt = true;
@@ -20,12 +20,8 @@ bool STEP_Reader::isCorrupt() const {
     return corrupt;
 }
 
-const Mesh& STEP_Reader::getMesh() const {
-    return this->mesh;
-}
-
-const std::vector<Point>& STEP_Reader::getPointCloud() const {
-    return this->pointCloud;
+Part& STEP_Reader::getPart() {
+    return part;
 }
 
 bool STEP_Reader::isValidSTEPFile(const std::string &filePath) {
