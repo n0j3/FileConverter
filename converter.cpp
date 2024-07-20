@@ -3,7 +3,7 @@
 #include "converter.h"
 
 // Constructor
-Converter::Converter() : binary(true) {}
+Converter::Converter() : binary(true), ap214(true) {}
 
 // Public methods
 bool Converter::inputs() {
@@ -16,55 +16,74 @@ bool Converter::inputs() {
 
 
 bool Converter::readFile() {
-    inputType = defineExtension(inputFile);
-    if (inputType == Extension::INVALID) {
-        std::cerr << "Invalid input file extension!" << std::endl;
-        return false;
-    }
+    std::string inputPath = joinPaths(inputDir, inputFile);
+    bool success = false;
 
-    std::string inputPath = inputDir + "/" + inputFile;   // joinPaths(inputDir, inputFile);
+    switch (defineExtension(inputFile)) {
+    case Extension::INVALID:
+        std::cerr << "Invalid input file extension: " << inputFile << std::endl;
+        success = false;
+        break;
 
-    if (inputType == Extension::STEP) {
+    case Extension::STEP: {
         STEP_Reader stepReader;
-        return stepReader.readSTEP(inputPath, part);
+        success = stepReader.readSTEP(inputPath, part);
+        break;
     }
 
-    if (inputType == Extension::STL) {
+    case Extension::STL: {
         STL_Reader stlReader;
-        return stlReader.readSTL(inputPath, part);
-    } 
+        success = stlReader.readSTL(inputPath, part);
+        break;
+    }
 
-    return false;
+    default:
+        std::cerr << "Unsupported input file extension: " << inputFile << std::endl;
+        success = false;
+        break;
+    }
+
+    return success;
 }
 
 
 bool Converter::showFile() {
-    // Implement logic to show the part
+    
     std::cout << "Displaying part..." << std::endl;
-    // Example: part.display();
+
     return true;
 }
 
+
 bool Converter::writeFile() {
-    outputType = defineExtension(outputFile);
-    if (outputType == Extension::INVALID) {
-        std::cerr << "Invalid output file extension!" << std::endl;
-        return false;
-    }
+    std::string outputPath = joinPaths(outputDir, outputFile);
+    bool success = false;
 
-    std::string outputPath = outputDir + "//" + outputFile;  // joinPaths(outputDir, outputFile);
+    switch (defineExtension(outputFile)) {
+    case Extension::INVALID:
+        std::cerr << "Invalid output file extension: " << outputFile << std::endl;
+        success = false;
+        break;
 
-    if (outputType == Extension::STEP) {
+    case Extension::STEP: {
         STEP_Writer stepWriter;
-        return stepWriter.writeSTEP(part, outputPath, ap214);
+        success = stepWriter.writeSTEP(part, outputPath, ap214);
+        break;
     }
 
-    else if (outputType == Extension::STL) {
+    case Extension::STL: {
         STL_Writer stlWriter;
-        return stlWriter.writeSTL(part, outputPath, binary);
+        success = stlWriter.writeSTL(part, outputPath, binary);
+        break;
     }
 
-    return false;
+    default:
+        std::cerr << "Unsupported output file extension: " << outputFile << std::endl;
+        success = false;
+        break;
+    }
+
+    return success;
 }
 
 // Private methods
@@ -72,26 +91,23 @@ Extension Converter::defineExtension(const std::string &file) {
     std::string::size_type idx = file.rfind('.');
     if (idx != std::string::npos) {
         std::string extension = file.substr(idx + 1);
+
+        if (extension == "step" || extension == "STEP" || extension == "stp" || extension == "STP") {
+            return Extension::STEP;
+        }
         
-        if (extension == "step" || extension == "STEP") {
-            return Extension::STEP;
-        }
-
-        else if (extension == "stp" || extension == "STP") {
-            return Extension::STEP;
-        }
-
         else if (extension == "stl" || extension == "STL") {
             return Extension::STL;
-        } 
+        }
     }
+
     return Extension::INVALID;
 }
-
 
 std::string Converter::joinPaths(const std::string& dir, const std::string& file) {
     std::filesystem::path dirPath(dir);
     std::filesystem::path filename(file);
     std::filesystem::path filePath = dirPath / filename;
+
     return filePath.string();
 }

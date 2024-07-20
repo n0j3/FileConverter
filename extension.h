@@ -13,14 +13,13 @@ enum class Extension {
 
 inline const std::unordered_map<Extension, std::string> extensionToStringMap = {
     { Extension::STEP, "step" },
-    { Extension::STL, "stl" },
-    { Extension::STP, "stp" }
+    { Extension::STL, "stl" }
 };
 
 inline const std::unordered_map<std::string, Extension> stringToExtensionMap = {
     { "step", Extension::STEP },
     { "stl", Extension::STL },
-    { "stp", Extension::STP }
+    { "stp", Extension::STEP }
 };
 
 inline std::string toString(Extension extension) {
