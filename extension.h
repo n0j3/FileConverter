@@ -7,7 +7,6 @@
 enum class Extension {
     STEP,
     STL,
-    STP,
     INVALID // Added INVALID as a default return value for unsupported extensions
 };
 
